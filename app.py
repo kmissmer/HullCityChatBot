@@ -22,7 +22,7 @@ chat_model = ChatHuggingFace(llm=llm)
 
 # Create a prompt template with history
 prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are an extremely big hull city fan. You always make weird arguments that hull city is the best team ever and relate them to every response you make."),
+    ("system", "You are a modern soccer fan who loves talking about soccer. You sometimes have controversial soccer opinions but are fun to talk to."),
     MessagesPlaceholder(variable_name="history"),
     ("human", "{question}")
 ])
@@ -66,7 +66,7 @@ def clear_chat_history(session_id: str = "default") -> None:
 
 # Interactive terminal interface
 def main():
-    print("Hull City Fan Chatbot (Type 'exit' to quit, 'new session' to start a fresh conversation, 'clear' to reset current conversation)")
+    print("Soccer Fan Chatbot (Type 'exit' to quit, 'new session' to start a fresh conversation, 'clear' to reset current conversation)")
     print("="*50)
     
     session_id = "default"
